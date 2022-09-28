@@ -4,6 +4,8 @@
 // Uses user input for the diameter and calculates a pizza cost
 
 #include <iostream>
+#include <iomanip>
+
 
 int main() {
     // HST constant
@@ -37,5 +39,7 @@ int main() {
     total = cost + tax;
 
     // output
-    std::cout << "Your pizza will cost $" << total << "!\n";
+    std::cout << "Your pizza will cost $" << std::fixed <<
+    std::setprecision(2) << std::setfill('0') << total <<
+    std::endl;
 }
